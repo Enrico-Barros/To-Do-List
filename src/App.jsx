@@ -8,11 +8,7 @@ import Search from "./components/Search";
 import Filter from "./components/Filter";
 
 function App() {
-  const [todos, setTodos] = useState(() => {
-    const storedArray = localStorage.getItem("List");
-    const initialValue = JSON.parse(storedArray);
-    return initialValue || [];
-  });
+  const [todos, setTodos] = useState([]);
 
   const addTodo = (text, category) => {
     const newTodos = [
@@ -50,7 +46,7 @@ function App() {
     setTodos(newTodos);
   };
 
-  window.localStorage.setItem("List", JSON.stringify(todos));
+  localStorage.setItem("List", JSON.stringify(todos));
 
   return (
     <div className="app">
