@@ -50,7 +50,7 @@ function App() {
     setTodos(newTodos);
   };
 
-  localStorage.setItem("List", JSON.stringify(todos));
+  window.localStorage.setItem("List", JSON.stringify(todos));
 
   return (
     <div className="app">
