@@ -46,7 +46,11 @@ function App() {
     setTodos(newTodos);
   };
 
-  localStorage.setItem("List", JSON.stringify(todos));
+  localStorage.setItem("List", "Enrico");
+  const Name = localStorage.getItem("List");
+  onload = () => {
+    alert(Name);
+  };
 
   return (
     <div className="app">
